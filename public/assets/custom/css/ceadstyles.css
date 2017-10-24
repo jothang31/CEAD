@@ -1,0 +1,596 @@
+/*
+|================================
+| CEAD PROJECT
+| CURRENT VERSION: 1.0
+|  
+| LAST MODIFIED: 14/05/07
+| DEVELOPER: ANGELO CRUZ 
+|================================
+*/
+
+/*
+|--------------------------------
+| MAIN LIST
+|--------------------------------
+*/
+.main-list.center {
+  width: 300px;
+  margin: 1px auto;
+  font-family: oneday;
+  font-size: 2em;
+}
+.main-list a{
+  text-decoration: none;
+  color: inherit;
+}
+.main-list a:hover {
+  color: inherit;
+}
+.main-list .main-list-item {
+  display: block;
+  padding: 14px 0;
+  margin: 4px 0;
+}
+.main-list .main-list-item:hover,
+.main-list .main-list-item:focus {
+  background: linear-gradient(to right, rgba(93, 198, 193, 1), rgba(195, 57, 79, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/*
+|--------------------------------
+| /. MAIN LIST
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| PARALLAX
+|--------------------------------
+*/
+.parallax-container {
+  background: /*url("/assets/custom/images/pictures/default/pattern3.png") center,*/ 
+              linear-gradient(to right, rgba(93, 198, 193, 1), rgba(19, 57, 79, 1));
+}
+/*
+|--------------------------------
+| /. PARALLAX
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| SEARCH
+|--------------------------------
+*/
+.full-container {
+  height: 100%;
+  width: 100%;
+}
+.container-flex {
+  display: flex;
+}
+.flex-middle {
+  align-items: center;
+}
+.flex-end {
+  align-items: flex-end;
+}
+.margin-left-m {
+  margin-left: 15px;
+}
+.search-container {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  position: relative;
+}
+.search-container input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+/*
+|--------------------------------
+| /. EARCH
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| BOOTSTRAP TOOLTIP
+|--------------------------------
+*/
+.tooltip-color-001 + .tooltip .tooltip-inner {background-color: rgba(43, 46, 58, 0.5)}
+.tooltip-color-001 + .tooltip .tooltip-arrow {border-bottom-color: transparent !important;}
+/*
+|--------------------------------
+| /. BOOTSTRAP TOOLTIP
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| LOG IN
+|--------------------------------
+*/
+html {
+  height: 100%;
+}
+.colorfull {
+  height: 100%;
+  background: linear-gradient(to right, rgba(93, 198, 193, 1), rgba(19, 57, 79, 1));
+}
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -125px;
+  width: 250px;
+  height: 300px;
+}
+.login form{
+  margin: 60px 0px 40px 0px;
+}
+.login input {
+  margin: 5px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #eee;
+}
+.login input:focus,
+.login button:focus,
+.login button:active:focus {
+  outline: none;
+}
+.login button {
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.login .cead-logo {
+  text-align: center;
+  position: relative;
+}
+.login .cead-logo:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -45px;
+  height: 90px;
+  width: 90px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.fulled {
+  width: 100%;
+}
+/*
+|--------------------------------
+| /. LOG IN
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| MAIN MODAL
+|--------------------------------
+*/
+#main-modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #fff;
+  text-align: center;
+  z-index: 1001;
+}
+.modal-content {
+  height: calc(100% - 50px);
+  overflow-y: auto;
+  border-radius: 0;
+  padding: 120px 0px;
+}
+.modal footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  background-color: #efefef;
+}
+/*
+|--------------------------------
+| /. MAIN MODAL
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| SEARCH
+|--------------------------------
+*/
+.list-container {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-container.absolute {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.item {
+  width: 100%;
+  padding: 15px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+.item-avatar {
+  padding-left: 60px;
+  position: relative;
+}
+.item .check {
+  height: 17px;
+  width: 7px;
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  transform: rotateZ(45deg);
+  border: 2px solid transparent;
+}
+.item .check.checked {
+  border-right-color: #26A69A;
+  border-bottom-color: #26A69A;
+}
+.avatar {
+  background-color: #c5c5c5;
+}
+img[data-target].avatar {
+  cursor: pointer;
+}
+.circle {
+  border-radius: 50%;
+}
+.item-avatar img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+.item:hover,
+.item:focus {
+  background: #eee;
+}
+/*
+|--------------------------------
+| /. SEARCH
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| HANDLING MEMBERS
+|--------------------------------
+*/
+.handling-container {
+  width: 100%; 
+  background: #efefef/*url('/assets/custom/images/pictures/default/admin-3.png')*/; 
+  background-size: 100%;
+  position: relative;
+  padding-bottom: 70px;
+}
+
+a.add {
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: #1b1d2a;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+}
+a.add:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+/*
+|--------------------------------
+| /. HANDLING MEMBERS
+|--------------------------------
+*/
+.middle-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.middle-container.padding-top {
+  padding-top: 70px;
+}
+.avatar-container {
+  width: 100px;
+  height: 100px;
+}
+.middle-top-over {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+  border: 3px solid #fff;
+}
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+}
+.avatar-small {
+  width: 60px;
+  height: 60px;
+}
+.container-inline div,
+.container-inline ul {
+  display: inline-block;
+}
+.container-inline {
+  padding: 15px 0;
+}
+.container-inline ul {
+  width: calc(100% - 202px);
+}
+.search-fluid {
+  width: 100% !important;
+}
+.container-inline div:last-child {
+  width: 118px;
+}
+.circle img {
+  border-radius: 50%;
+}
+.title-center {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+  font-family: oneday
+}
+.title-center:before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 1;
+}
+.title-center.unmargin:before {
+  width: calc(100% + 30px);
+  margin-left: -15px;
+}
+.title-center label {
+  margin-bottom: 0;
+}
+.title-center .title {
+  position: relative;
+  padding: 0 20px;
+  display: inline-block;
+  margin: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+label[role=button] input {
+  position: absolute;
+  left: -100000000000px;
+}
+label[role=button] input:not(checked) + h5 {
+  color: rgba(51, 51, 51, 0.5);
+}
+label[role=button] input:not(checked):hover + h5,
+label[role=button] input:checked + h5 {
+  color: rgba(51, 51, 51, 1);
+}
+.undisplay {
+  display: none;
+}
+.unscroll {
+  height: 1350px;
+  overflow: hidden;
+}
+.solid-buttom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #999;
+}
+.solid-buttom:after,
+.solid-buttom:before {
+  content: '';
+  position: absolute;
+  border-left: 1px solid #999;
+  height: 10px;
+  bottom: 0;
+}
+.solid-buttom:after {
+  content: '';
+  right: 0;
+}
+.solid-buttom:before {
+  content: '';
+  left: 0;
+}
+.search-container input:focus + div{
+  border-bottom-color: #26A69A;
+}
+.search-container input:focus + div:before,
+.search-container input:focus + div:after {
+  border-left-color: #26A69A;
+}
+.header-button {
+  text-align: right;
+  width: calc(100% + 30px);
+  padding: 15px;
+  margin: 0px -15px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.header-button #buttonSave {
+  padding: 0 16px;
+}
+.button-group select {
+  width: 57px;
+  height: 29px;
+}
+
+
+/*
+|--------------------------------
+| OVERLAY
+|--------------------------------
+*/
+.overlay {
+  position: fixed;
+  top: -100px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 150%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*
+|--------------------------------
+| /. OVERLAY
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| FOOTER
+|--------------------------------
+*/
+.footer {
+  height: 100px;
+  background-color: #1b1d2a;
+  text-align: center;
+  line-height: 100px;
+  font-size: 2em;
+}
+/*
+|--------------------------------
+| /. FOOTER
+|--------------------------------
+*/
+
+/*
+|=======================================
+| HORIZONTAL MOVILES OR VERTICAL TABLETS  
+|=======================================
+*/
+@media (min-width: 768px) {
+  .search-container {
+    width: 400px;
+  }
+  .search-fluid {
+    width: 100% !important;
+  }
+  .flex-center {
+    align-items: center;
+  }
+  a.add {
+    right: 20px;
+  }
+  .avatar-small {
+  width: 60px;
+  height: 60px;
+  }
+}
+ 
+/*
+|======================================
+| HORIZONAL TABLETS AND NORMAL DESKTOPS   
+|======================================
+*/
+@media (min-width: 1024px) {
+  .search-container {
+    width: 600px;
+  }
+  .search-fluid {
+    width: 100% !important;
+  }
+  .middle-container {
+    width: 1000px;
+  }
+  .middle-container.padding-top {
+    padding-top: 100px;
+  }
+  .avatar-small {
+  width: 60px;
+  height: 60px;
+  }
+}
+ 
+/*
+|==================================
+| VERY LONG DESKTOPS
+|==================================  
+*/
+@media (min-width: 1200px) {
+  /*
+  |--------------------------------
+  | MAIN MODAL
+  |--------------------------------
+  */
+  #main-modal {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .main-list .main-list-item {
+    display: block;
+    margin: 8px 0;
+  }
+  /*
+  |--------------------------------
+  | /. MAIN MODAL
+  |--------------------------------
+  */
+  .search-container {
+    width: 700px;
+  }
+  .search-fluid {
+    width: 100% !important;
+  }
+  a.add {
+    height: 64px;
+    width: 64px;
+    right: 40px;
+    line-height: 64px;
+  }
+  .avatar-container {
+    width: 144px;
+    height: 144px;
+  }
+  .middle-top-over {
+    top: -72px;
+    left: calc(50% - 72px);
+  }
+  .avatar-small {
+  width: 60px;
+  height: 60px;
+  }
+}

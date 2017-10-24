@@ -1,0 +1,440 @@
+/*
+|================================
+| CEAD PROJECT
+| CURRENT VERSION: 1.0
+|  
+| LAST MODIFIED: 14/05/07
+| DEVELOPER: ANGELO CRUZ 
+|================================
+*/
+
+@font-face {
+  font-family: oneday;
+  src: url("../fonts/oneday/oneday.ttf");
+}
+
+/*
+|--------------------------------
+| CEAD OFFICIAL PAGE LOGO 
+|--------------------------------
+*/
+.logo {
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+/*
+|--------------------------------
+| /. CEAD OFFICIAL PAGE LOGO 
+|--------------------------------
+*/
+
+/* 
+|--------------------------------
+| USER PICTURE 
+|--------------------------------
+*/
+ul.absolute {
+  display: none;
+}
+.avatar-nav {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 145px;
+  z-index: 1000;
+}
+
+.avatar-nav .avatar {
+  overflow: hidden;
+  background-color: #1b1d2a;
+}
+.avatar img {width: 100%;}
+/*
+|--------------------------------
+| /. USER PICTURE   
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| MENU BUTTON   
+|--------------------------------
+*/
+.switch-container {
+  width: 130px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2000;
+}
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 130px;
+  height: 50px;
+  z-index: 2000;
+}
+.switch .switch-label {
+  width: 130px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 50px;
+  border-radius: 21px;
+  background: rgba(43, 46, 58, 0.5);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.switch .switch-label span:first-child {
+  display: block;
+  margin-right: 50px;
+}
+.switch.active .switch-label span:last-child {
+  display: block;
+  margin-left: 50px;
+}
+.switch.active .switch-label span:first-child,
+.switch .switch-label span:last-child {
+  display: none;
+}
+.switch.active .switch-label {
+  left: none;
+  right: 0;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.switch .slider {
+  right: 0;
+  animation: sliderunactive .3s forwards;
+}
+@keyframes sliderunactive {
+  from {width: 130px}
+  to {width: 50px}
+}
+.switch.active .slider {
+  right: 0 !important;
+  left: inherit !important;
+  animation: slideractive .3s forwards;
+}
+@keyframes slideractive {
+  from {width: 50px}
+  to {width: 130px}
+}
+.slider-button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 50px;
+  background-color: #1b1d2a;
+}
+.switch button {position: absolute; top: -1000000000px}
+.home-loader {
+  height: 46px;
+  width: 46px;
+  margin: 2px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+.home-loader.active {
+  border-top-color: #4c9ed9;
+  animation: load .5s linear infinite;
+}
+@keyframes load {
+  from {transform: rotateZ(0deg);}
+  to {transform: rotateZ(360deg);}
+}
+.slider-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -9px;
+  margin-left: -10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.first-line,
+.second-line,
+.third-line {
+  width: 20px;
+  height: 2px;
+  margin: 3px 0px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+.switch.round .switch-label {
+  border-radius: 25px;
+}
+.switch.round .slider .slider-button,
+.switch.round .slider .slider-button .slider-icon{
+  border-radius: 50%;
+}
+.right {
+  right: 0 !important;
+  left: inherit !important;
+}
+/*
+|--------------------------------
+| /. MENU BUTTON 
+|--------------------------------
+*/
+
+/*
+|--------------------------------
+| PARALLAX 
+|--------------------------------
+*/
+.parallax-container {
+  position: relative;
+}
+.parallax-principal {
+  height: 510px;
+}
+.parallax-default {
+  height: 120px;
+}
+.parallax-message {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  text-align: center;
+  font-family: oneday;
+  font-weight: bold;
+  font-size: 2em;
+  color: #eee;
+}
+/*
+|--------------------------------
+| /. PARALLAX 
+|--------------------------------
+*/
+
+/*
+|=======================================
+| HORIZONTAL MOVILES OR VERTICAL TABLETS  
+|=======================================
+*/
+@media (min-width: 768px) {
+
+}
+/*
+|=======================================
+| HORIZONTAL MOVILES OR VERTICAL TABLETS  
+|=======================================
+*/
+@media (min-width: 768px) {
+  /*
+  |--------------------------------
+  | CEAD OFFICIAL PAGE LOGO  
+  |--------------------------------
+  */
+  .logo {
+    height: 50px;
+    top: 20px;
+    left: 20px;
+  }
+  /*
+  |--------------------------------
+  | /. CEAD OFFICIAL PAGE LOGO  
+  |--------------------------------
+  */
+  
+  /*
+  |--------------------------------
+  | USER PICTURE 
+  |--------------------------------
+  */
+  .avatar-nav {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 155px;
+  }
+  /*
+  |--------------------------------
+  | /. USER PICTURE  
+  |--------------------------------
+  */
+  
+  /*
+  |--------------------------------
+  | MENU BUTTON   
+  |--------------------------------
+  */
+  .switch-container {
+    width: 130px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+  }
+  /*
+  |---------------------------------
+  | PARALLAX
+  |---------------------------------
+  |*/
+  .parallax-default {
+    height: 90px;
+  }
+  /*
+  |---------------------------------
+  | /. PARALLAX
+  |---------------------------------
+  |*/
+}
+ 
+/*
+|======================================
+| HORIZONAL TABLETS AND NORMAL DESKTOPS   
+|======================================
+*/
+@media (min-width: 1024px) {
+  
+}
+ 
+/*
+|==================================
+| VERY LONG DESKTOPS
+|==================================  
+*/
+@media (min-width: 1200px) {
+  /*
+  |--------------------------------
+  | CEAD OFFICIAL PAGE
+  |--------------------------------
+  LOGO  */
+  .logo {
+    height: 65;
+    top: 40px;
+    left: 40px;
+  }
+  /*
+  |--------------------------------
+  | /. CEAD OFFICIAL PAGE LOGO
+  |--------------------------------  
+  */
+  
+  /*
+  |--------------------------------
+  | USER PICTURE 
+  |--------------------------------
+  */
+  .avatar-nav {
+    width: 65px;
+    height: 65px;
+    top: 40px;
+    right: 225px;
+  }
+  /*
+  |--------------------------------
+  | /. USER PICTURE 
+  |--------------------------------
+   */
+  
+  /*
+  |--------------------------------
+  | MENU BUTTON   
+  |--------------------------------
+  */
+  .switch-container {
+    width: 180px;
+    height: 64px;
+    top: 40px;
+    right: 40px;
+  }
+  .switch {
+    width: 180px;
+    height: 64px;
+  }
+  .switch .switch-label {
+    width: 180px;
+    height: 64px;
+    line-height: 64px;
+    border-radius: 35px;
+  }
+  .switch .switch-label span:first-child {
+    margin-right: 64px;
+  }
+  .switch.active .switch-label span:last-child {
+    margin-left: 64px;
+  }
+  .slider {
+    min-width: 64px;
+    height: 64px;
+    border-radius: 35px;
+  }
+  @keyframes sliderunactive {
+    from {width: 180px}
+    to {width: 64px}
+  }
+  @keyframes slideractive {
+    from {width: 64px}
+    to {width: 180px}
+  }
+  .slider-button {
+    height: 64px;
+    width: 64px;
+  }
+  .switch button {position: absolute; top: -1000000000px}
+  .home-loader {
+    height: 60px;
+    width: 60px;
+    margin: 2px;
+  }
+  .slider-icon {
+    margin-top: -12.5px;
+    margin-left: -14px;
+  }
+  .first-line,
+  .second-line,
+  .third-line {
+    width: 28px;
+    height: 3px;
+    margin: 4px 0px;
+    border-radius: 3px;
+  }
+  .switch.round .switch-label {
+    border-radius: 35px;
+  }
+  /*
+  |--------------------------------
+  | /. MENU BUTTON  
+  |--------------------------------
+  */
+  
+  /*
+  |--------------------------------
+  | PARALLAX MESSAGE  
+  |--------------------------------
+  */
+  .parallax-default {
+    height: 144px;
+  }
+  .parallax-message {
+    letter-spacing: 5px;
+  }
+  /*
+  |--------------------------------
+  | /. PARALLAX MESSAGE
+  |--------------------------------
+  */
+}
