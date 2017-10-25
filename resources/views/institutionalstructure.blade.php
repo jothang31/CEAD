@@ -31,50 +31,36 @@
     <div class="middle-container">
     	<div class="container-fluid" style="height: 600px">
     	  <header class="header-button">
-			<button id="buttonSave">Guardar</button>
-          </header>
-          <div class="container-inline" id="user" code="" request-rout="structure/save">
-          	<div class="avatar-container avatar-small">
-           		<img src="{{ asset('assets/custom/images/pictures/default/avatar.png') }}" class="avatar circle" id="avatar" alt="">
-          	</div>
-            <ul class="nav margin-left-m">
-              <li>
-                <h3 class="name" id="name">Nombre</h3>
-              </li>
-            </ul>
-            <div class="button-group">
-              <div style="position: relative;">
-                <select cass="tooltip-color-001" id="selectGroup" data-target='selectSubgroup' request-rout="structure/subgroup" data-toggle="tooltip" data-placement="top" title="Red">
-                  <option value="0"></option>
-                  @foreach($groups as $group)
+			    <button id="buttonSave">Guardar</button>
+        </header>
+        <div class="container-inline" id="user" code="" request-rout="structure/save">
+        	<div class="avatar-container avatar-small">
+         		<img src="{{ asset('assets/custom/images/pictures/default/avatar.png') }}" class="avatar circle" id="avatar" alt="">
+        	</div>
+          <ul class="nav margin-left-m">
+            <li>
+              <h3 class="name" id="name">Nombre</h3>
+            </li>
+          </ul>
+          <div class="button-group">
+            <div style="position: relative;">
+              <select cass="tooltip-color-001" id="selectGroup" data-target='selectSubgroup' request-rout="structure/subgroup" data-toggle="tooltip" data-placement="top" title="Red">
+                <option value="0"></option>
+                @foreach($groups as $group)
 
-                    <option value="{{ $group->code }}">{{ $group->subcode }}</option>
+                  <option value="{{ $group->code }}">{{ $group->subcode }}</option>
 
-                  @endforeach
-                </select>                
-              </div>
-            	<select cass="tooltip-color-001" id="selectSubgroup" data-toggle="tooltip" data-placement="top" title="Subred">
-            		<option value=""></option>
-            	</select>
+                @endforeach
+              </select>                
             </div>
+          	<select cass="tooltip-color-001" id="selectSubgroup" data-toggle="tooltip" data-placement="top" title="Subred">
+          		<option value=""></option>
+          	</select>
           </div>
-{{--           <div>
-    	      <div class="search-container search-fluid">
-    	        <input type="text" id="patherLocalSearch" data-target="userLocalList" placeholder="Buscar">	
-    	        <div class="solid-buttom"></div>
-    	      </div>
-          	<ul class="list-container" id="userLocalList">
-          	@foreach($users as $user)				
-	          <li class="item item-avatar" id="{{ $user->code }}">
-	            <img src="../../assets/custom/images/pictures/users/{{ $user->avatar }}" class="avatar circle" alt="">
-	            <div class="property">
-	              <span class="name">{{ $user->name }}</span>
-	            </div> 
-	            <div class="check"></div> 
-	          </li>          
-          	@endforeach
-          	</ul>
-          </div> --}}
+        </div>
+      	<ul class="list-container" id="userLocalList">
+          
+        </ul>
     	</div>
     </div>
   </div>

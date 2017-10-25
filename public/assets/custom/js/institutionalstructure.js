@@ -12,6 +12,7 @@
 
 // Initialization
 $(function() {
+  
   // We give animation to home button and event's driver
   $("#btn-home").on("click", function() {
     $(this).parents(".switch").toggleClass("active"); 
@@ -22,26 +23,17 @@ $(function() {
 
   $('input[request-rout]').on('input', getUsersMatchRequest);
 
-  // Evento para quitar selección
-  $('#userLocalList').children('li').on('click', function () {
+  // Evento que recupera el subgrupo de un grupo
+  $('#selectGroup').on('change', getSubgroupsRequest);
 
-  	$(this).children('.check').toggleClass('checked');
-
-  });
-
- // Evento que recupera el subgrupo de un grupo
- $('#selectGroup').on('change', getSubgroupsRequest);
-
- // Evento que guarda la estrucutura selecionada
- $('#buttonSave').on('click', saveStructureRequest);
-
- // Evento para buscar los usuarios en la lista local
- // $('#patherLocalSearch').on('input', getUserMatchLocal);
+  // Evento que guarda la estrucutura selecionada
+  $('#buttonSave').on('click', saveStructureRequest);
 
 });
 
 // Function for throw the modal and floating main button
 function showNavMenu(element) {
+
   var switchElement = $(element).parents(".switch");
   
   // If main button is active then show menu's modal else show out
@@ -54,6 +46,7 @@ function showNavMenu(element) {
     $(".overlay").css("display", "none");
     $("#main-modal").css("display", "none");
   }
+
 }
 
 function getUsersMatchRequest () {
@@ -79,7 +72,6 @@ function getUsersMatchRequest () {
     $('#' + target).html('');
 
   }
-
 
 }
 
@@ -159,7 +151,6 @@ function getUserStructureRequest () {
 function getUserStructureResponse (response) {
 
   var data = response;
-
   var group = data.group;
   var users = data.users;
 
@@ -303,35 +294,35 @@ function saveStructureResponse (response) {
 
 }
 
-function getUserMatchLocal() {
+// function getUserMatchLocal() {
 
-  var pattern = $(this).val().toLowerCase();
-  var target = $(this).attr('data-target');
-  var matches = [];
+//   var pattern = $(this).val().toLowerCase();
+//   var target = $(this).attr('data-target');
+//   var matches = [];
 
-  $('#' + target).children('.item').each(function() {
+//   $('#' + target).children('.item').each(function() {
 
-    var name = $(this).find('.name').html().toLowerCase();
+//     var name = $(this).find('.name').html().toLowerCase();
 
-    // Verificamos el patron de nombre coninside alguno de los 
-    // nombres del usuario
-    if (name.search(pattern) >= 0) {
+//     // Verificamos el patron de nombre coninside alguno de los 
+//     // nombres del usuario
+//     if (name.search(pattern) >= 0) {
 
-      // Lo agregamos al arreglo de oinsidencias
-      matches.push($(this));
+//       // Lo agregamos al arreglo de coinsidencias
+//       matches.push($(this));
 
-    }
+//     }
 
-  });
+//   });
 
-  // Obtenemos el primer elemento de la lista para
-  // insertar el elemento que coincide antes de este
-  var itemReference = $('#' + target).children('.item').first();
+//   // Obtenemos el primer elemento de la lista para
+//   // insertar el elemento que coincide antes de este
+//   var itemReference = $('#' + target).children('.item').first();
 
-  for (var i in matches) {
+//   for (var i in matches) {
 
-      $(matches[i]).insertBefore(itemReference);
+//       $(matches[i]).insertBefore(itemReference);
 
-  }
+//   }
 
 }

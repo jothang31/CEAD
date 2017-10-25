@@ -18,22 +18,6 @@ class InstitutionStructureController extends Controller
 {
     public function show () {
 
-    	// $users = CeadUser::join('CEAD_USERS_INFOS', 'CEAD_USERS.CU_CODE', '=', 'CEAD_USERS_INFOS.CU_CODE')
-    	// 				 ->join('CEAD_STATUSES', 'CEAD_USERS.CS_CODE', '=', 'CEAD_STATUSES.CS_CODE')
-    	// 				 ->where('CEAD_STATUSES.CS_CODE', '=', '1')
-     //                     ->select(
-     //                        'CEAD_USERS.CU_CODE AS code',
-     //                        DB::raw("CONCAT_WS(
-     //                            ' ', 
-     //                            CUI_FIRST_NAME,
-     //                            CUI_MIDDLE_NAME,
-     //                            CUI_LAST_NAME,
-     //                            CUI_SECOND_SURNAME
-     //                        ) AS name"),
-     //                        'CU_NAME_PICTURE_PROFILE AS avatar'
-     //                        )
-     //                     ->get();
-
       $groups = CeadGroupXGroup::join('CEAD_GROUPS', 'CEAD_GROUP_X_GROUPS.CG_PARENT_CODE', '=', 'CEAD_GROUPS.CG_CODE')
                               ->select(
                                   'CEAD_GROUPS.CG_CODE AS code', 
@@ -79,7 +63,6 @@ class InstitutionStructureController extends Controller
                          ->leftJoin('CEAD_GROUP_X_GROUPS', 'CEAD_GROUPS.CG_CODE', '=', 'CEAD_GROUP_X_GROUPS.CG_CODE')
                          ->where([
                                 ['CEAD_GROUP_X_USERS.CU_CODE', '=', $code],
-                                ['CEAD_GROUP_X_USERS.CS_CODE', '=', 1]
                             ])
                          ->select(
                             'CEAD_GROUPS.CG_CODE AS code',
@@ -91,7 +74,6 @@ class InstitutionStructureController extends Controller
         $users = CeadUser::join('CEAD_USER_X_USERS', 'CEAD_USERS.CU_CODE', '=', 'CEAD_USER_X_USERS.CU_CODE')
                          ->where([
                             ['CEAD_USER_X_USERS.CU_LEADER_CODE', '=', $code],
-                            ['CEAD_USER_X_USERS.CS_CODE', '=', 1]
                          ])
                          ->select('CEAD_USERS.CU_CODE AS code')
                          ->get();
@@ -99,9 +81,7 @@ class InstitutionStructureController extends Controller
 
 
         return compact('groups', 'group', 'users');
-
-
-
+        
     }
 
     public function save (Request $request) {

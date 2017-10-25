@@ -243,19 +243,6 @@ html {
   padding-left: 60px;
   position: relative;
 }
-.item .check {
-  height: 17px;
-  width: 7px;
-  position: absolute;
-  right: 20px;
-  top: 14px;
-  transform: rotateZ(45deg);
-  border: 2px solid transparent;
-}
-.item .check.checked {
-  border-right-color: #26A69A;
-  border-bottom-color: #26A69A;
-}
 .avatar {
   background-color: #c5c5c5;
 }
