@@ -33,7 +33,6 @@ $(function() {
 
 // Function for throw the modal and floating main button
 function showNavMenu(element) {
-
   var switchElement = $(element).parents(".switch");
   
   // If main button is active then show menu's modal else show out
@@ -46,7 +45,6 @@ function showNavMenu(element) {
     $(".overlay").css("display", "none");
     $("#main-modal").css("display", "none");
   }
-
 }
 
 function getUsersMatchRequest () {
@@ -72,6 +70,7 @@ function getUsersMatchRequest () {
     $('#' + target).html('');
 
   }
+
 
 }
 
